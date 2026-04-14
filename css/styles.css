@@ -491,45 +491,39 @@ ul { list-style: none; }
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
-  /* Fix mobile background to pure dark */
+  /* Force pure dark background on mobile */
   body, .hero, .section, .bg-light, .nav-menu.active {
     background-color: var(--bg-dark) !important;
   }
 
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    flex-direction: column;
-    background: var(--bg-dark) !important;
-    width: 100%;
-    text-align: center;
-    padding: 2rem 0;
-    transition: var(--transition);
-    border-bottom: 1px solid var(--border);
-  }
-  
-  .nav-menu.active { left: 0; }
-  .hamburger { display: flex; }
-  
+  /* Hero adjustments */
   .hero h1 { font-size: 2rem; }
+  
+  /* Fix compact mobile text */
+  .hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    padding: 0 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Keep your existing mobile layout fixes */
   .section { padding: 4rem 0; }
   .section-title { font-size: 1.4rem; }
   
-  /* Mobile: stack dates above content */
-  .exp-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  
-  .exp-date {
-    margin-top: 5px;
-    font-size: 0.75rem;
-  }
+  .exp-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .exp-date { margin-top: 5px; font-size: 0.75rem; }
   
   .project-header { flex-direction: column; align-items: flex-start; }
   .project-tag { align-self: flex-start; }
+
+  .nav-menu {
+    position: fixed; left: -100%; top: 70px; flex-direction: column;
+    background: var(--bg-dark) !important; width: 100%; text-align: center;
+    padding: 2rem 0; transition: var(--transition); border-bottom: 1px solid var(--border);
+  }
+  .nav-menu.active { left: 0; }
+  .hamburger { display: flex; }
 }
 
 @media (max-width: 480px) {
