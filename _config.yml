@@ -1,0 +1,11 @@
+title: Kushani C P De Silva | Cybersecurity Portfolio
+description: Cybersecurity student portfolio featuring penetration testing projects, vulnerability research, and framework-aligned security work.
+url: "https://kushaniC.github.io"
+baseurl: "/portfolio"
+markdown: kramdown
+theme: null
+plugins: []
+exclude:
+  - README.md
+  - LICENSE
+  - CNAME
