@@ -162,6 +162,7 @@ ul { list-style: none; }
   font-size: 2.4rem;
   margin-bottom: 0.75rem;
   color: var(--text-primary);
+  text-shadow: 0 0 12px rgba(220, 38, 38, 0.5); /* Subtle red glow */
 }
 
 .hero-title {
@@ -369,89 +370,67 @@ ul { list-style: none; }
   font-weight: 500;
 }
 
-/* ===== Timeline (Experience/Education) - FIXED SPACING ===== */
-.timeline {
-  position: relative;
+/* ===== FIXED: Experience & Education (Clean Cards) ===== */
+.exp-grid {
+  display: grid;
+  gap: 1.5rem;
   max-width: 850px;
-  margin: 2rem auto 0;
-  padding-left: 120px; /* Space for dates */
+  margin: 0 auto;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 110px; /* Line position */
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--border);
-}
-
-.timeline-item {
-  position: relative;
-  padding-bottom: 2rem;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: 104px; /* Center dot on line */
-  top: 6px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--bg-dark);
-  border: 2px solid var(--primary);
-  z-index: 1;
-}
-
-.timeline-date {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100px;
-  text-align: right;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  color: var(--primary);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-.timeline-content {
+.exp-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-left: 3px solid var(--primary);
   border-radius: var(--radius);
-  padding: 1.25rem;
+  padding: 1.5rem;
   transition: var(--transition);
 }
 
-.timeline-content:hover {
+.exp-card:hover {
   border-color: var(--border-hover);
+  transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
 
-.timeline-content h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-  color: var(--text-primary);
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.timeline-content h4 {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.75rem;
-  font-weight: 500;
+.exp-header h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin: 0;
   font-family: var(--font-mono);
 }
 
-.timeline-content ul {
-  padding-left: 1rem;
+.exp-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--primary);
+  background: rgba(220, 38, 38, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+  font-weight: 600;
 }
 
-.timeline-content li {
+.exp-card h4 {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+}
+
+.exp-card ul { padding-left: 1rem; }
+.exp-card li {
   color: var(--text-secondary);
   margin-bottom: 0.4rem;
   font-size: 0.9rem;
@@ -512,12 +491,17 @@ ul { list-style: none; }
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
+  /* Fix mobile background to pure dark */
+  body, .hero, .section, .bg-light, .nav-menu.active {
+    background-color: var(--bg-dark) !important;
+  }
+
   .nav-menu {
     position: fixed;
     left: -100%;
     top: 70px;
     flex-direction: column;
-    background: var(--bg-darker);
+    background: var(--bg-dark) !important;
     width: 100%;
     text-align: center;
     padding: 2rem 0;
@@ -532,19 +516,16 @@ ul { list-style: none; }
   .section { padding: 4rem 0; }
   .section-title { font-size: 1.4rem; }
   
-  /* Mobile timeline: stack dates above content */
-  .timeline { padding-left: 0; margin-top: 1rem; }
-  .timeline::before { display: none; }
-  .timeline-item::before { display: none; }
-  .timeline-date {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: auto;
-    text-align: left;
-    margin-bottom: 0.5rem;
-    display: block;
-    font-size: 0.8rem;
+  /* Mobile: stack dates above content */
+  .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .exp-date {
+    margin-top: 5px;
+    font-size: 0.75rem;
   }
   
   .project-header { flex-direction: column; align-items: flex-start; }
