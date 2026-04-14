@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Kushani C P De Silva - Cybersecurity Student & Aspiring Penetration Tester">
+  <title>Kushani C P De Silva | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Kushani C P De Silva</a>
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Kushani C P De Silva</h1>
+      <p class="hero-title">Cybersecurity Student | Aspiring Penetration Tester</p>
+      <p class="hero-subtitle">
+        Seeking onsite penetration testing internships in Sri Lanka, or remote security roles globally. 
+        Translating offensive security research, vulnerability assessment, and framework-aligned methodology 
+        into actionable defense improvements.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="assets/Kushani_DeSilva_CV.pdf" class="btn btn-secondary" download>Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="about-content">
+        <p>
+          I am a second-year undergraduate pursuing a BSc (Hons) in Information Technology 
+          specializing in Cyber Security at the Sri Lanka Institute of Information Technology (SLIIT). 
+          With a current CGPA of 3.43/4.0 and Dean's List recognition, I combine academic rigor with 
+          hands-on experience in penetration testing, vulnerability research, and security automation.
+        </p>
+        <p>
+          My technical foundation includes Linux system administration, Python and Bash scripting for 
+          security tooling, network analysis with Wireshark and Nmap, and security frameworks such as 
+          MITRE ATT&CK, OWASP Top 10, and ISO/IEC 27001. I have developed practical tools including 
+          AutoReconLite (Bash-based reconnaissance framework) and RedScan CLI (Python web vulnerability scanner).
+        </p>
+        <p>
+          <strong>Internship Focus:</strong> I am actively seeking <strong>onsite penetration testing internships in Sri Lanka</strong>, 
+          or <strong>remote cybersecurity roles</strong> (SOC analysis, vulnerability assessment, security engineering) 
+          with teams anywhere in the world. Based in Galle, Sri Lanka, I am available for immediate start 
+          and flexible across time zones.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Technical Skills & Certifications</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Security Tools</h3>
+          <ul>
+            <li>Kali Linux, Wireshark, Nmap</li>
+            <li>Metasploit (check-only), Hydra</li>
+            <li>Wazuh SIEM, LetsDefend</li>
+            <li>AttackIQ (MITRE Operationalization)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Programming & Scripting</h3>
+          <ul>
+            <li>Python (Requests, Socket, TensorFlow, Scikit-learn)</li>
+            <li>Bash / Shell Scripting</li>
+            <li>Java, C, R, SQL</li>
+            <li>Git / GitHub</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks & Standards</h3>
+          <ul>
+            <li>MITRE ATT&CK v13</li>
+            <li>OWASP Top 10 (2025)</li>
+            <li>ISO/IEC 27001:2022</li>
+            <li>NIST Cybersecurity Framework 2.0</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Certifications</h3>
+          <ul>
+            <li>Fortinet Certified Fundamentals (FCF)</li>
+            <li>OPSWAT: Critical Infrastructure Protection</li>
+            <li>ISO/IEC 27001 InfoSec Associate (Skillfront)</li>
+            <li>Cisco: Linux Unhatched, Intro to Cybersecurity, Network Tech</li>
+            <li>Palo Alto: AI in Cybersecurity Fundamentals</li>
+            <li>Forage: Mastercard & TATA Cybersecurity Simulations</li>
+            <li>TryHackMe: OWASP Top 10 IAAA Failures</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <ul>
+            <li>English: Professional Working Proficiency (B1)</li>
+            <li>French: B1 (Completed 1st Sem, BA French USJP)</li>
+            <li>Sinhala: Native</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Vulnerability Research & Reporting</li>
+            <li>Technical Documentation & Auditing</li>
+            <li>Cross-functional Collaboration</li>
+            <li>Adaptive Problem Solving</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        
+        <!-- Project 1: AutoReconLite -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>AutoReconLite</h3>
+            <span class="project-tag">Reconnaissance</span>
+          </div>
+          <p>
+            Bash-based penetration testing framework automating TCP SYN scanning, 
+            service detection, OS fingerprinting, and NSE vulnerability checks with 
+            modular design, color-coded CLI, and automated report generation.
+          </p>
+          <div class="project-tech">
+            <span>Bash</span>
+            <span>Nmap</span>
+            <span>Linux CLI</span>
+            <span>Modular Design</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/kushaniC/AutoReconLite" target="_blank" class="project-link">View Repository</a>
+            <a href="projects/autoreconlite.md" class="project-link">Case Study</a>
+          </div>
+        </div>
+
+        <!-- Project 2: RedScan CLI -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>RedScan CLI</h3>
+            <span class="project-tag">Web Security</span>
+          </div>
+          <p>
+            Python-based web vulnerability scanner for HTTPS detection, security 
+            header analysis, and basic port scanning. Tested against OWASP Juice Shop 
+            with structured CLI output and extensible architecture.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Requests</span>
+            <span>Socket</span>
+            <span>OWASP</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/kushaniC/RedScan-CLI" target="_blank" class="project-link">View Repository</a>
+            <a href="projects/redscan-cli.md" class="project-link">Case Study</a>
+          </div>
+        </div>
+
+        <!-- Project 3: SOC Simulation Lab -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>SOC Simulation Lab</h3>
+            <span class="project-tag">SIEM / Detection</span>
+          </div>
+          <p>
+            Built an isolated VMware lab with Wazuh SIEM to detect SSH brute force attacks. 
+            Implemented syslog forwarding, alert correlation, and mapped findings to 
+            NIST CSF 2.0 and MITRE ATT&CK T1110.001.
+          </p>
+          <div class="project-tech">
+            <span>Wazuh</span>
+            <span>Ubuntu</span>
+            <span>Kali</span>
+            <span>NIST CSF</span>
+            <span>MITRE ATT&CK</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/kushaniC/soc-simulation-lab" target="_blank" class="project-link">View Repository</a>
+            <a href="projects/soc-simulation-lab.md" class="project-link">Case Study</a>
+          </div>
+        </div>
+
+        <!-- Project 4: Electricity Forecasting -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Household Electricity Peak Forecasting</h3>
+            <span class="project-tag">Machine Learning</span>
+          </div>
+          <p>
+            Predictive analytics framework for peak demand forecasting using 2M+ 
+            records from UCI repository. Implemented preprocessing pipeline with 
+            IQR outlier detection, PCA, and evaluated LSTM, SVR, and Random Forest 
+            models (R² = 0.998).
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>Scikit-learn</span>
+            <span>Pandas</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/kushaniC/Electricity-Forecasting" target="_blank" class="project-link">View Repository</a>
+            <a href="projects/electricity-forecast.md" class="project-link">Case Study</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Section -->
+  <section id="experience" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Experience & Education</h2>
+      <div class="timeline">
+        
+        <!-- Experience -->
+        <div class="timeline-item">
+          <div class="timeline-date">Dec 2024 – Jan 2025</div>
+          <div class="timeline-content">
+            <h3>Winter Intern (Software & Digital Operations)</h3>
+            <h4>Easy Cloud | Hyderabad, India (Remote)</h4>
+            <ul>
+              <li>Explored and experimented with 3+ AI tools and automation solutions to support productivity and technical workflows</li>
+              <li>Assisted with 5+ digital marketing campaigns: content preparation, campaign research, and performance tracking</li>
+              <li>Collaborated with cross-functional teams in cloud-based and ERP-oriented development environments</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="timeline-item">
+          <div class="timeline-date">2024 – 2028 (Expected)</div>
+          <div class="timeline-content">
+            <h3>BSc (Hons) in Information Technology – Cyber Security</h3>
+            <h4>Sri Lanka Institute of Information Technology (SLIIT)</h4>
+            <ul>
+              <li>Current CGPA: 3.43/4.0</li>
+              <li>Dean's List – 2nd Year, 1st Semester</li>
+              <li>Relevant Coursework: Network Security, Ethical Hacking, Digital Forensics, Risk Management</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Volunteering -->
+        <div class="timeline-item">
+          <div class="timeline-date">Sep 2022 – Oct 2022</div>
+          <div class="timeline-content">
+            <h3>Campus Ambassador</h3>
+            <h4>International MUN | Remote</h4>
+            <ul>
+              <li>Promoted diplomatic simulation programs, coordinated student outreach, and facilitated event participation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Dec 2024 – Jan 2025</div>
+          <div class="timeline-content">
+            <h3>Global Volunteer</h3>
+            <h4>AIESEC</h4>
+            <ul>
+              <li>Participated in cross-cultural volunteer initiatives, developing adaptability and cross-organizational communication skills</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <p class="contact-intro">
+          I am seeking <strong>onsite penetration testing internships in Sri Lanka</strong>, 
+          or <strong>remote cybersecurity roles</strong> (SOC analysis, vulnerability assessment, 
+          security engineering) with teams globally. Let's connect to discuss how my 
+          offensive security skills and framework-aligned methodology can contribute to your team.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:smkcpdesilva@gmail.com" class="contact-link">
+            <strong>Email:</strong> smkcpdesilva@gmail.com
+          </a>
+          <a href="tel:+94769904840" class="contact-link">
+            <strong>Phone:</strong> +94 76 990 4840
+          </a>
+          <a href="https://www.linkedin.com/in/kushani-de-silva-8021581aa/" target="_blank" class="contact-link">
+            <strong>LinkedIn:</strong> linkedin.com/in/kushani-de-silva-8021581aa
+          </a>
+          <a href="https://github.com/kushaniC" target="_blank" class="contact-link">
+            <strong>GitHub:</strong> github.com/kushaniC
+          </a>
+          <p class="contact-location">
+            <strong>Location:</strong> Galle, Sri Lanka | Open to Onsite (Sri Lanka) or Remote (Global)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Kushani C P De Silva. All rights reserved.</p>
+      <p>Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
