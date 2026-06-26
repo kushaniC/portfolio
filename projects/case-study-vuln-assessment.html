@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerability Assessment - Case Study | Kushani De Silva</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .case-study { padding: 4rem 0; min-height: 100vh; }
+        .case-study-header { text-align: center; margin-bottom: 3rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; font-family: var(--font-mono); font-size: 0.9rem; color: var(--primary); }
+        .back-link:hover { transform: translateX(-5px); }
+        .case-study-header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-primary); }
+        .case-study-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .case-study-meta { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted); }
+        .case-study-content { max-width: 900px; margin: 0 auto; }
+        .case-section { margin-bottom: 3rem; }
+        .case-section h2 { font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--text-primary); padding-bottom: 0.75rem; border-bottom: 2px solid var(--primary); }
+        .case-section h3 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--text-primary); }
+        .case-section p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; }
+        .case-section ul, .case-section ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .case-section li { color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.75rem; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0; }
+        .tech-stack span { background: rgba(220, 38, 38, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: var(--radius); font-family: var(--font-mono); font-size: 0.85rem; border: 1px solid var(--primary); }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .result-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: var(--radius); }
+        .result-card h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.75rem; }
+        .result-card p { color: var(--text-secondary); font-size: 0.95rem; margin: 0; }
+        .vulnerability-list { background: var(--bg-darker); padding: 1.5rem; border-radius: var(--radius); border-left: 4px solid var(--primary); margin: 1.5rem 0; }
+        .vulnerability-list h4 { color: var(--primary); margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-bracket">[</span>KD<span class="logo-bracket">]</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="case-study">
+        <div class="container">
+            <div class="case-study-header">
+                <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+                <h1>Vulnerability Assessment</h1>
+                <p class="case-study-subtitle">Passive Reconnaissance Report</p>
+                <div class="case-study-meta">
+                    <span>📅 2024</span>
+                    <span>⏱️ Security Assessment</span>
+                    <span>🏷️ OWASP Top 10</span>
+                </div>
+            </div>
+
+            <div class="case-study-content">
+                <section class="case-section">
+                    <h2>🎯 Project Overview</h2>
+                    <p>
+                        Conducted a comprehensive passive reconnaissance assessment on a target application, 
+                        identifying 13 endpoints (public, hidden, and artifacts) without active exploitation. 
+                        All findings were mapped to OWASP Top 10 2021 standards.
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h2>🔍 Methodology</h2>
+                    <h3>Passive Reconnaissance Techniques</h3>
+                    <ul>
+                        <li><strong>OSINT Gathering:</strong> Open-source intelligence collection from public sources</li>
+                        <li><strong>Subdomain Enumeration:</strong> Identified subdomains using passive DNS records</li>
+                        <li><strong>Technology Stack Analysis:</strong> Fingerprinted web technologies and frameworks</li>
+                        <li><strong>Directory Bruteforcing:</strong> Discovered hidden endpoints and directories</li>
+                        <li><strong>Metadata Analysis:</strong> Extracted information from public documents and artifacts</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h2>📊 Key Findings</h2>
+                    <div class="vulnerability-list">
+                        <h4> Critical Risks Identified</h4>
+                        <ul>
+                            <li><strong>Publicly Accessible Admin Panels:</strong> Administrative interfaces exposed without proper access controls</li>
+                            <li><strong>IDOR Vulnerabilities:</strong> Insecure Direct Object References allowing unauthorized data access</li>
+                            <li><strong>Information Disclosure:</strong> Sensitive information exposed through error messages and comments</li>
+                            <li><strong>Outdated Components:</strong> Use of vulnerable third-party libraries and frameworks</li>
+                        </ul>
+                    </div>
+
+                    <h3>Endpoints Discovered</h3>
+                    <ul>
+                        <li><strong>Public Endpoints:</strong> 7 standard application endpoints</li>
+                        <li><strong>Hidden Endpoints:</strong> 4 non-publicly linked paths</li>
+                        <li><strong>Artifacts:</strong> 2 backup files and configuration artifacts</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h2>🛡️ OWASP Top 10 Mapping</h2>
+                    <p>All identified vulnerabilities were mapped to OWASP Top 10 2021 categories:</p>
+                    <ul>
+                        <li><strong>A01:2021 - Broken Access Control:</strong> Admin panel exposure, IDOR</li>
+                        <li><strong>A02:2021 - Cryptographic Failures:</strong> Weak encryption implementations</li>
+                        <li><strong>A05:2021 - Security Misconfiguration:</strong> Default configurations, verbose errors</li>
+                        <li><strong>A06:2021 - Vulnerable and Outdated Components:</strong> Unpatched libraries</li>
+                        <li><strong>A09:2021 - Security Logging Failures:</strong> Insufficient audit trails</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h2>💡 Recommendations</h2>
+                    <ol>
+                        <li>Implement proper authentication and authorization for admin panels</li>
+                        <li>Add access control checks for all object references</li>
+                        <li>Remove or secure backup files and configuration artifacts</li>
+                        <li>Update all third-party components to latest secure versions</li>
+                        <li>Implement proper error handling to prevent information disclosure</li>
+                        <li>Enable comprehensive security logging and monitoring</li>
+                    </ol>
+                </section>
+
+                <section class="case-section">
+                    <h2>📈 Impact</h2>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <h4>Vulnerabilities Found</h4>
+                            <p>13 endpoints identified with multiple security risks</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Critical Issues</h4>
+                            <p>4 critical vulnerabilities requiring immediate attention</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Framework Compliance</h4>
+                            <p>100% mapped to OWASP Top 10 2021 standards</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>💡 Key Learnings</h2>
+                    <ul>
+                        <li>Importance of passive reconnaissance in security assessments</li>
+                        <li>OWASP Top 10 vulnerability classification and reporting</li>
+                        <li>Professional vulnerability assessment methodologies</li>
+                        <li>Risk prioritization and remediation strategies</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kushani De Silva. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

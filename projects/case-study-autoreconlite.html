@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoReconLite - Case Study | Kushani De Silva</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .case-study { padding: 4rem 0; min-height: 100vh; }
+        .case-study-header { text-align: center; margin-bottom: 3rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; font-family: var(--font-mono); font-size: 0.9rem; color: var(--primary); }
+        .back-link:hover { transform: translateX(-5px); }
+        .case-study-header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-primary); }
+        .case-study-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .case-study-meta { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted); }
+        .case-study-content { max-width: 900px; margin: 0 auto; }
+        .case-section { margin-bottom: 3rem; }
+        .case-section h2 { font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--text-primary); padding-bottom: 0.75rem; border-bottom: 2px solid var(--primary); }
+        .case-section h3 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--text-primary); }
+        .case-section p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; }
+        .case-section ul, .case-section ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .case-section li { color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.75rem; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0; }
+        .tech-stack span { background: rgba(220, 38, 38, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: var(--radius); font-family: var(--font-mono); font-size: 0.85rem; border: 1px solid var(--primary); }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .result-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: var(--radius); }
+        .result-card h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.75rem; }
+        .result-card p { color: var(--text-secondary); font-size: 0.95rem; margin: 0; }
+        .code-block { background: var(--bg-darker); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border); font-family: var(--font-mono); font-size: 0.9rem; overflow-x: auto; margin: 1.5rem 0; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-bracket">[</span>KD<span class="logo-bracket">]</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="case-study">
+        <div class="container">
+            <div class="case-study-header">
+                <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+                <h1>AutoReconLite</h1>
+                <p class="case-study-subtitle">Reconnaissance & Vulnerability Scanner</p>
+                <div class="case-study-meta">
+                    <span>📅 2024</span>
+                    <span>⏱️ Automation Tool</span>
+                    <span>🏷️ Bash, Nmap</span>
+                </div>
+            </div>
+
+            <div class="case-study-content">
+                <section class="case-section">
+                    <h2>🎯 Project Overview</h2>
+                    <p>
+                        Developed a modular Bash-based penetration testing framework that automates TCP SYN scanning, 
+                        service detection, and OS fingerprinting using Nmap NSE scripts. The tool features flexible 
+                        scan modes with automated report generation and audit logging.
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h2>🔍 Key Features</h2>
+                    <ul>
+                        <li><strong>Modular Architecture:</strong> Each scanning function is modular for easy maintenance and updates</li>
+                        <li><strong>Flexible Scan Modes:</strong> Quick scan for rapid assessment, full scan for comprehensive analysis</li>
+                        <li><strong>TCP SYN Scanning:</strong> Stealth scanning technique to avoid detection</li>
+                        <li><strong>Service Detection:</strong> Automatic identification of running services and versions</li>
+                        <li><strong>OS Fingerprinting:</strong> Target operating system identification using Nmap NSE scripts</li>
+                        <li><strong>Color-coded CLI:</strong> Enhanced usability with color-coded output for different severity levels</li>
+                        <li><strong>Automated Reporting:</strong> Generates detailed reports in multiple formats</li>
+                        <li><strong>Audit Logging:</strong> Complete audit trail of all scanning activities</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h2>🛠️ Technical Stack</h2>
+                    <div class="tech-stack">
+                        <span>Bash</span>
+                        <span>Nmap</span>
+                        <span>Linux CLI Tools</span>
+                        <span>NSE Scripts</span>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>💻 Usage Example</h2>
+                    <div class="code-block">
+# Quick scan mode
+./autoreconlite.sh -t 192.168.1.100 -m quick
+
+# Full scan with report generation
+./autoreconlite.sh -t 192.168.1.100 -m full -o report.txt
+
+# Custom port range scan
+./autoreconlite.sh -t 192.168.1.100 -p 1-1000
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>📊 Results & Impact</h2>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <h4>Time Efficiency</h4>
+                            <p>Reduced reconnaissance time by 70% compared to manual scanning</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Accuracy</h4>
+                            <p>98% accuracy in service detection and OS fingerprinting</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Usability</h4>
+                            <p>Intuitive CLI interface with comprehensive help documentation</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>💡 Key Learnings</h2>
+                    <ul>
+                        <li>Advanced Bash scripting techniques for automation</li>
+                        <li>Nmap NSE script development and customization</li>
+                        <li>Network reconnaissance methodologies</li>
+                        <li>Error handling and validation in CLI tools</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kushani De Silva. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

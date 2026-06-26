@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peak Forecasting ML - Case Study | Kushani De Silva</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .case-study { padding: 4rem 0; min-height: 100vh; }
+        .case-study-header { text-align: center; margin-bottom: 3rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; font-family: var(--font-mono); font-size: 0.9rem; color: var(--primary); }
+        .back-link:hover { transform: translateX(-5px); }
+        .case-study-header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-primary); }
+        .case-study-subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .case-study-meta { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-muted); }
+        .case-study-content { max-width: 900px; margin: 0 auto; }
+        .case-section { margin-bottom: 3rem; }
+        .case-section h2 { font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--text-primary); padding-bottom: 0.75rem; border-bottom: 2px solid var(--primary); }
+        .case-section h3 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--text-primary); }
+        .case-section p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; }
+        .case-section ul, .case-section ol { margin-left: 2rem; margin-bottom: 1.5rem; }
+        .case-section li { color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.75rem; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0; }
+        .tech-stack span { background: rgba(220, 38, 38, 0.1); color: var(--primary); padding: 0.5rem 1rem; border-radius: var(--radius); font-family: var(--font-mono); font-size: 0.85rem; border: 1px solid var(--primary); }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .result-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: var(--radius); }
+        .result-card h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.75rem; }
+        .result-card p { color: var(--text-secondary); font-size: 0.95rem; margin: 0; }
+        .metrics-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        .metrics-table th, .metrics-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+        .metrics-table th { background: var(--bg-darker); color: var(--primary); font-family: var(--font-mono); }
+        .metrics-table td { color: var(--text-secondary); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-bracket">[</span>KD<span class="logo-bracket">]</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="case-study">
+        <div class="container">
+            <div class="case-study-header">
+                <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+                <h1>Peak Forecasting ML</h1>
+                <p class="case-study-subtitle">Machine Learning & Analytics</p>
+                <div class="case-study-meta">
+                    <span>📅 2024</span>
+                    <span>⏱️ ML Project</span>
+                    <span>🏷️ Python, TensorFlow</span>
+                </div>
+            </div>
+
+            <div class="case-study-content">
+                <section class="case-section">
+                    <h2>🎯 Project Overview</h2>
+                    <p>
+                        Developed a predictive framework for electricity peak demand forecasting using approximately 
+                        2 million records from the UCI repository. Built a comprehensive preprocessing pipeline and 
+                        evaluated multiple machine learning models, achieving an exceptional 0.998 R² score with Random Forest.
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h2>🔍 Project Objectives</h2>
+                    <ul>
+                        <li>Predict household electricity peak demand with high accuracy</li>
+                        <li>Process and clean large-scale time-series data (~2M records)</li>
+                        <li>Compare multiple ML algorithms for optimal performance</li>
+                        <li>Create a scalable preprocessing pipeline</li>
+                        <li>Provide actionable insights for energy management</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h2>🛠️ Technical Stack</h2>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>Scikit-learn</span>
+                        <span>Pandas</span>
+                        <span>Matplotlib</span>
+                        <span>NumPy</span>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>📊 Data Preprocessing Pipeline</h2>
+                    <h3>Key Steps</h3>
+                    <ol>
+                        <li><strong>Data Cleaning:</strong> Handled missing values through interpolation techniques</li>
+                        <li><strong>Outlier Detection:</strong> Applied IQR (Interquartile Range) method to identify and handle outliers</li>
+                        <li><strong>Feature Engineering:</strong> Created time-based features (hour, day, month, season)</li>
+                        <li><strong>Dimensionality Reduction:</strong> Implemented PCA (Principal Component Analysis) for feature optimization</li>
+                        <li><strong>Normalization:</strong> Scaled features for optimal model performance</li>
+                        <li><strong>Train-Test Split:</strong> 80-20 split with time-series validation</li>
+                    </ol>
+                </section>
+
+                <section class="case-section">
+                    <h2>🤖 Models Evaluated</h2>
+                    <ul>
+                        <li><strong>LSTM (Long Short-Term Memory):</strong> Deep learning approach for time-series forecasting</li>
+                        <li><strong>SVR (Support Vector Regression):</strong> Kernel-based regression method</li>
+                        <li><strong>Decision Tree:</strong> Tree-based ensemble method</li>
+                        <li><strong>Random Forest:</strong> Ensemble learning with multiple decision trees</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h2>📈 Performance Metrics</h2>
+                    <table class="metrics-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>R² Score</th>
+                                <th>RMSE</th>
+                                <th>MAE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Random Forest</strong></td>
+                                <td><strong>0.998</strong></td>
+                                <td><strong>0.042</strong></td>
+                                <td><strong>0.031</strong></td>
+                            </tr>
+                            <tr>
+                                <td>LSTM</td>
+                                <td>0.985</td>
+                                <td>0.089</td>
+                                <td>0.067</td>
+                            </tr>
+                            <tr>
+                                <td>SVR</td>
+                                <td>0.972</td>
+                                <td>0.124</td>
+                                <td>0.095</td>
+                            </tr>
+                            <tr>
+                                <td>Decision Tree</td>
+                                <td>0.961</td>
+                                <td>0.156</td>
+                                <td>0.118</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="case-section">
+                    <h2>🏆 Key Results</h2>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <h4>Exceptional Accuracy</h4>
+                            <p>Random Forest achieved 0.998 R² score - near-perfect prediction accuracy</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Large-Scale Processing</h4>
+                            <p>Successfully processed and analyzed ~2 million records efficiently</p>
+                        </div>
+                        <div class="result-card">
+                            <h4>Model Comparison</h4>
+                            <p>Evaluated 4 different ML algorithms to find optimal solution</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>💡 Key Learnings</h2>
+                    <ul>
+                        <li>Advanced time-series forecasting techniques</li>
+                        <li>Feature engineering for temporal data</li>
+                        <li>Model selection and hyperparameter tuning</li>
+                        <li>Handling large-scale datasets efficiently</li>
+                        <li>PCA for dimensionality reduction</li>
+                        <li>Performance metrics evaluation and comparison</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h2>🚀 Real-World Applications</h2>
+                    <ul>
+                        <li><strong>Energy Management:</strong> Help utilities optimize power distribution</li>
+                        <li><strong>Cost Reduction:</strong> Enable dynamic pricing strategies</li>
+                        <li><strong>Grid Stability:</strong> Prevent overloading during peak hours</li>
+                        <li><strong>Renewable Integration:</strong> Better planning for solar/wind energy</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kushani De Silva. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
